@@ -7,7 +7,7 @@ The sensor is set at the ultra low power setting and a 1 second refresh rate.
 
 ##Dependency
 
-This library uses the [I2C library from Wayne Truchsess]: https://github.com/rambo/I2C
+This library uses the [I2C library from Wayne Truchsess] (https://github.com/rambo/I2C)
 The example compiles to about 520 bytes less code and uses 169 bytes less dynamic memory compared to the Wire library and won't freeze when the sensor is disconnected.
 
 ##Usage
