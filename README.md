@@ -18,7 +18,7 @@ The example compiles to about 520 bytes less code and uses 169 bytes less dynami
 
 * getPressure(mode)
 
- Initiate a temperature and pressure reading and returns the pressure in Pascal.  If there is a I2C error returns 0.  The default mode is 1.
+ Initiate a temperature and pressure reading and returns the pressure in Pascal.  If there is a I2C error returns 0.
 
 * getLastTemperature()
 
