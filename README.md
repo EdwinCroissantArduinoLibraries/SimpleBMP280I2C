@@ -1,11 +1,14 @@
 #SimpleBMP180I2C library
 
-This is bare bone BMP085/BMP180 Library
+This is a bare bone BMP280 Library
+
+This library uses 32 bit fixed point calculations.
+The sensor is set at the ultra low power setting and a 1 second refresh rate.
 
 ##Dependency
 
 This library uses the [I2C library from Wayne Truchsess]: https://github.com/rambo/I2C
-The example compiles to about 400 bytes less code with respect to the Wire library and won't freeze when the sensor is disconnected.
+The example compiles to about 520 bytes less code and uses 169 bytes less dynamic memory compared to the Wire library and won't freeze when the sensor is disconnected.
 
 ##Usage
 
