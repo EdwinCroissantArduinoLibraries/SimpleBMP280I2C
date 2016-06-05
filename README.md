@@ -1,4 +1,4 @@
-#SimpleBMP180I2C library
+#SimpleBMP280I2C library
 
 This is a bare bone BMP280 Library
 
