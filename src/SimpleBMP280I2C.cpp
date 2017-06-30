@@ -50,7 +50,7 @@ boolean SimpleBMP280I2C::begin() {
 	/* read the calibration data*/
 	if (I2c.read(_I2C_Addr, calData, 24) != 0)
 		return false;
-	for (int i = 0; i < 24; i++) {
+	for (int i = 0; i < 24; ++i) {
 		_calData.calArray[i] = I2c.receive();
 	}
 
