@@ -73,7 +73,7 @@ int32_t SimpleBMP280I2C::getPressure(void) {
 	union {
 		int32_t int32;
 		struct {
-			uint8_t XLSB, LSB, MSB;
+			uint8_t LLSB, LSB, MSB, MMSB;
 		};
 	} UT, UP; //uncompensated temperature and uncompensated pressure
 
@@ -82,12 +82,14 @@ int32_t SimpleBMP280I2C::getPressure(void) {
 		return 0;
 	}
 
+	UP.MMSB = 0;
 	UP.MSB = I2c.receive();
 	UP.LSB = I2c.receive();
-	UP.XLSB = I2c.receive();
+	UP.LLSB = I2c.receive();
+	UT.MMSB = 0;
 	UT.MSB = I2c.receive();
 	UT.LSB = I2c.receive();
-	UT.XLSB = I2c.receive();
+	UT.LLSB = I2c.receive();
 
 	UT.int32 >>= 4;
 	UP.int32 >>= 4;
