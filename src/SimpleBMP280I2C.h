@@ -32,6 +32,7 @@ class SimpleBMP280I2C {
 public:
 	SimpleBMP280I2C(int8_t = 0x76);
 	boolean begin();
+	boolean begin(int8_t);
 	int32_t getPressure(void);
 	int16_t getLastTemperature(void);
 

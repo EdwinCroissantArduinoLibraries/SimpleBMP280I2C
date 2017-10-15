@@ -63,6 +63,11 @@ boolean SimpleBMP280I2C::begin() {
 	return true;
 }
 
+boolean SimpleBMP280I2C::begin(int8_t I2C_Addr) {
+	_I2C_Addr = I2C_Addr;
+	return begin();
+}
+
 /*
  * Returns the pressure in Pascal.
  */
